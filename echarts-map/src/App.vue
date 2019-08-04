@@ -22,7 +22,6 @@ export default {
         title : {
             text: 'Echarts3 中国地图下钻至县级',
             subtext: '三级下钻',
-            link:'http://www.ldsun.com',
             left: 'center',
             textStyle:{
                 color: '#fff',
@@ -38,24 +37,13 @@ export default {
             }
         },
         tooltip: {
-            trigger: 'item',
-            formatter: '{b}'
+            trigger: 'item'
         },
         toolbox: {
-            show: true,
+            show: false,
             orient: 'vertical',
             left: 'right',
-            top: 'center',
-            feature: {
-                dataView: {readOnly: false},
-                restore: {},
-                saveAsImage: {}
-            },
-            iconStyle:{
-              normal:{
-                color:'#fff'
-              }
-            }
+            top: 'center'
         },
         animationDuration:1000,
         animationEasing:'cubicOut',
@@ -69,23 +57,21 @@ export default {
     let d = [];
     for( var i=0;i<china.features.length;i++ ){
       d.push({
-        name:china.features[i].properties.name
+        name:china.features[i].properties.name,
+        value: '100'
       })
     }
     echarts.registerMap('china', china);
     this.renderMap('china',d);
-    console.log(this)
     this.myChart.on('click', function (params) {
-      console.log( params.name );
-      let that = this
       echarts.registerMap( '安徽', anhui);
 			let d = [];
 			for( var i=0;i<anhui.features.length;i++ ){
 				d.push({
-					name:anhui.features[i].properties.name
+          name:anhui.features[i].properties.name,
+          value: '200'
 				})
       }
-      console.log(vm)
 			vm.renderMap('安徽',d);
     })
     // let option = {
