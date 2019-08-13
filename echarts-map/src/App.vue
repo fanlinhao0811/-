@@ -13,8 +13,17 @@ import anhui from '../static/map/province/anhui.json'
 
 
 export default {
+  el:'App',
+
   name: 'App',
-  data () {
+  parents: '',
+
+  components:{},
+
+  props:[],
+
+  //本地的响应式属性
+  data() {
     return {
       myChart: undefined,
       option: {
@@ -51,6 +60,9 @@ export default {
       }
     }
   },
+  computed(){},
+
+  //响应式事件触发的回调,watch+生命周期
   mounted(){
     var vm = this;
     this.myChart = echarts.init(document.getElementById('main'));
@@ -96,6 +108,8 @@ export default {
     // console.log( params.name );
     // })
   },
+
+  //不依赖响应系统的实例属性
   methods: {
     renderMap(map,data){
     this.option.title.subtext = map;
@@ -139,6 +153,8 @@ export default {
     //渲染地图
     this.myChart.setOption(this.option);
   }
+
+  //template
 
   }
 }
