@@ -42,7 +42,6 @@ export default {
 <script>
 export default {
   props: ['articles'],
-  
   methods: {
     emitIndex(index) {
       this.$emit('onEmitIndex', index)
