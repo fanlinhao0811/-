@@ -15,6 +15,9 @@
 
 ```javascript
 JSON.parse(JSON.stringify());
+
+//https://lodash.com/docs/4.17.15#cloneDeep
+_.cloneDeep(objects)
 ```
 
 2.简单版
