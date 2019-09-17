@@ -11,3 +11,6 @@ Repository：仓库区（或本地仓库）
 Remote：远程仓库
 ```
 
+
+
+![image](./assets/git_order.png)
