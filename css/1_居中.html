@@ -7,24 +7,22 @@
     <title>居中</title>
     <style>
     .parent {
-        position: relative;
-        height: 200px;
+        width: 400px;
+        height: 300px;
+        display: table-cell;        
+        vertical-align: middle;
+        border: 1px solid red;
     }
     .child {
-        width: 80px;
-        height: 40px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: #ccc;
+        display: inline-block;
+        vertical-align: middle;
+        background: blue;
     }
     </style>
 </head>
 <body>
-    <!-- 水平居中 -->
     <div class="parent">
-        <div class="child">child</div>
+        <span class="child">child child child child child child child child child child child child child child child child child child child childchild child child </span>
     </div>
     
 </body>
