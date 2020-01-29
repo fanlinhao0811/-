@@ -15,5 +15,5 @@
 
 ## 2.Markdown
 
-- 常用语法
+- [常用语法](https://github.com/fanlinhao0811/Web/blob/master/markdown.md)
 
